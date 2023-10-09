@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Mercadoria</title>
+</head>
+<body>
+    <h1>Detalhes da Mercadoria</h1>
+    <p><strong>Nome:</strong> {{ mercadoria.nome }}</p>
+    <p><strong>Descrição:</strong> {{ mercadoria.descricao }}</p>
+    <p><strong>Preço:</strong> {{ mercadoria.preco }}</p>
+    <a href="{{ url_for('edit', id=mercadoria.id) }}">Editar</a>
+    <a href="{{ url_for('index') }}">Voltar para a lista</a>
+</body>
+</html>

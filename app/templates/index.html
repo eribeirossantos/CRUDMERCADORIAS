@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Mercadorias</title>
+</head>
+<body>
+    <h1>Lista de Mercadorias</h1>
+    <ul>
+        {% for mercadoria in mercadorias %}
+            <li>
+                <a href="{{ url_for('view', id=mercadoria.id) }}">{{ mercadoria.nome }}</a>
+                <a href="{{ url_for('edit', id=mercadoria.id) }}">Editar</a>
+                <a href="{{ url_for('delete', id=mercadoria.id) }}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add') }}">Adicionar Mercadoria</a>
+</body>
+</html>
